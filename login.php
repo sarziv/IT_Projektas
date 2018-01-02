@@ -25,9 +25,10 @@ if (isset($_POST['password'])) {
 if (isset($_POST['ordervardas'])) {
 	$ordervardas  = $conn->real_escape_string($_POST['ordervardas']);
 }
-if (!empty($_POST['ordervardas'])){
+if (!empty($_POST['ordervardas']) &&($_POST['name'])){
 $queryUserId   = "SELECT `user`.`id`  FROM `user` WHERE ((`user`.`name` ='$name'))";
 $resultUserId = $conn->query($queryUserId);
+
 if ($resultUserId ->num_rows > 0) {
     while($row = $resultUserId ->fetch_assoc()) {
 $queryUserOrder   = "INSERT INTO `orders`(`order_name`, `order_type_id`, `user_id`) VALUES ('$ordervardas','1',".$row["id"].")";
