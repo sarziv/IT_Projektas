@@ -1,7 +1,6 @@
 <html>
 <?php include 'head.html';?>
-<body>
-		
+<body>		
 <div id="wrapper">
 
 <!-- Sidebar -->
@@ -88,8 +87,9 @@ if ($resultUser ->num_rows > 0) {
 			//nauju vartotoju sukurimas -> redirect to admin_klie ir tech failus
 			include 'admin_naujas_klie.php';
 			include 'admin_naujas_tech.php';
-			
+echo '<h3 class="text-center"><a href="http://localhost:8082/Php_mysql/IT_Projektas/admin_visi.php">Visi Uzsakymai</a></h3>';
 echo '<h3 class="text-center">Nepriskirti uzsakymai</h3>';
+
 			//priskyrimas techams
 			
 $queryNepriUzsak   = "SELECT `orders`.`id`,`orders`.`order_name`, `orders`.`tech_id` FROM `orders` WHERE (`orders`.`tech_id` ='0')";
@@ -100,7 +100,7 @@ $resultAllTech = $conn->query($queryAllTech);
 
 ?>
 
-<table class="table table-striped table-inverse" align="center" style="width:500px">                     
+<table class="table table-striped table-inverse" align="center" style="width:500px;">                     
     <div class="table responsive">
         <thead>
             <tr>
@@ -145,6 +145,7 @@ echo	'</td>
 	</div>';
 	}
 }
+
 		
 //Tech 
 if ($row["user_type_id"] == 2){
