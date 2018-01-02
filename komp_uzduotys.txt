@@ -1,0 +1,8 @@
+Tema 6: Usakymu priemimo ir vykdymo sistema
+Administratorius registruoja technikus ir klientus, priskiria jiems usakymus, mato ar ivykdyti
+Technikas mato jam paskirtus usakymus, atymi vykdyma
+Klientas pateikia usakymus, mato savo usakymu vykdyma.
+--- papildomai:
+Fiksuojamas ivykiu laikas. Administratorius gauna ataskaitas apie ivykdytus pavedimus su ju trukme
+Technikas ir pats gali pasirinkti vykdymui iš esamu nepriskirtu usakymu
+Administratorius gali pakeisti vykdytoja dar neubaigtam pavedimui
