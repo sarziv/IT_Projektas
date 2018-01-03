@@ -176,6 +176,7 @@ $resultTechData = $conn->query($queryTechData);
         </thead>
     <tbody>
 <?php
+
 if ($resultTechData ->num_rows > 0) {
     // output data of each row
     while($row = $resultTechData ->fetch_assoc()) {
@@ -217,7 +218,22 @@ LEFT JOIN order_vykd ON orders.order_type_id = order_vykd.id
 WHERE (`user`.`name` ='$name')";
 $resultUserData = $conn->query($queryUserData);
 ?>
-<?php include 'naujas_forma.php';?>
+
+
+<form class="navbar-form text-center" action="login.php" method="post">
+<p><b>Naujas uzsakymas:</b></p>
+    <div class="form-group">
+         <input id="name" type="hidden" class="form-control" name="name" value="<?php echo $name ?>" placeholder="Vardas">                                        
+                </div>
+    <div class="form-group">
+         <input id="password" type="hidden" class="form-control" name="password" value="<?php echo $name ?>" placeholder="Password">                                        
+                </div>
+    <div class="form-group">
+         <input id="ordervardas" type="text" class="form-control" name="ordervardas" value="" placeholder="Uzsakymas" required>                                        
+            </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
 <table class="table table-striped table-inverse">                     
     <div class="table responsive">
         <thead>
