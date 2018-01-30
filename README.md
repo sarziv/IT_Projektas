@@ -91,5 +91,13 @@ Password: root
 #### Administrator
 ![Administrator](https://i.imgur.com/mPejJ5I.png)
 
-<h2>QOL</h2>
+<h2>QOL(Quality of life)</h2>
+
+<ul>
+<li>
 Redirects
+</li>
+<li>
+Session
+</li>
+</ul>
