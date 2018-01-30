@@ -90,3 +90,6 @@ Password: root
 
 #### Administrator
 ![Administrator](https://i.imgur.com/mPejJ5I.png)
+
+<h2>QOL</h2>
+Redirects
